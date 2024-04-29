@@ -1,0 +1,13 @@
+name: UTPMapRenderer
+version: 1.0.0
+main: fr.inovancy.main.UTPMapRenderer
+api-version: 1.18
+website: https://ultimate-themepark.com/
+depend:
+  - WorldGuard
+  - WorldEdit
+authors:
+  - Inovancy
+commands:
+  utprenderer:
+    description: Generate map png
