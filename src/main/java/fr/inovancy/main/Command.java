@@ -7,7 +7,7 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_20_R2.block.CraftBlock;
+import org.bukkit.craftbukkit.v1_18_R1.block.CraftBlock;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
