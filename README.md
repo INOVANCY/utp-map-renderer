@@ -1,21 +1,26 @@
 ![image](https://github.com/INOVANCY/UTP-MapRenderer/assets/82412381/77d69f28-7bc8-4e3f-b053-692e79f119c8)
 # UTP Map Renderer
-UTP Map Renderer vous permet de faire un rendu 2D (au format PNG) de votre carte Minecraft en un clin d'oeil.
-Finit les galères d'installation et d'utilisation de Dynmap: un rendu simple, fonctionnel et fiable en 2 clics.
+
+UTP Map Renderer offers a streamlined solution for generating 2D renderings (in PNG format) of your Minecraft map with ease. Say goodbye to the hassles of installing and using Dynmap; with UTP Map Renderer, you get a simple, functional, and reliable rendering in just two clicks.
 
 ## Installation
-Malheureusement, à cause d'un import spécifique dans le plugin, une version spécifique du plugin est nécessaire pour chaque version du jeu.
-<br/>Rendez-vous dans les relases de ce repository Github pour trouver votre version du jeu (1.18.1/.2, 1.19.0/.2/.3/.4, 1.20.2/.4).
-- Télécharger la version du plugin correspondant à la version de votre serveur Minecraft,
-- Glisser le plugin dans le FTP de votre serveur,
-- Assurez-vous que WorldEdit est installé sur votre serveur,
-- Redémarrez votre serveur.
 
-C'est tout!
-## Utilisation
-- Munissez-vous de l'outil de sélection de World Edit (//wand)
-- Sélectionnez les deux points diagonalement opposés de votre carte via un clic gauche et droit
-- Executez la commande /utpmaprenderer
+Due to specific imports within the plugin, a version tailored to each game version is required. Visit the releases section of this GitHub repository to locate the compatible version for your Minecraft server (1.18.1/.2, 1.19.0/.2/.3/.4, 1.20.2/.4).
+- Download the plugin version corresponding to your Minecraft server version.
+- Upload the plugin to your server's FTP.
+- Ensure that WorldEdit is installed on your server.
+- Restart your server.
 
-Attendez quelques instants - le temps d'un clin d'oeil - et c'est prêt !
-Le fichier PNG de votre carte se trouve dans votre FTP (/plugins/UTPMapRenderer/map-...png).
+That's it!
+
+## Usage
+
+- Equip yourself with the WorldEdit selection tool (//wand).
+- Select the two diagonally opposite points of your map by left and right-clicking.
+- Execute the command /utpmaprenderer.
+
+Wait a moment - as quick as a blink - and it's done!
+The PNG file of your map can be found in your FTP (/plugins/UTPMapRenderer/map-...png).
+
+## Pull Requests
+Feel free to contribute by submitting pull requests. Whether it's enhancing functionality, fixing bugs, or improving documentation, your contributions are welcome and valued. Please ensure that your pull requests adhere to the project's guidelines and standards. Let's work together to make UTP Map Renderer even better for the Minecraft community!
