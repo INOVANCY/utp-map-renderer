@@ -5,9 +5,9 @@ import com.sk89q.worldedit.regions.Region;
 import com.sk89q.worldedit.world.World;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_20_R3.block.CraftBlock;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -47,7 +47,8 @@ public class Command implements CommandExecutor {
                             for (int z = Ya; z < Yb; z++) {
                                 Location loc = new Location(p.getWorld(), x, (p.getLocation().getBlockY() - 1), z);
                                 Block block = p.getWorld().getHighestBlockAt(loc);
-                                Color c = new Color((((CraftBlock) block).getNMS().b().w()).ak);
+                                BlockData blockData = block.getBlockData();
+                                Color c = new Color(blockData.getMapColor().getRed(), blockData.getMapColor().getGreen(), blockData.getMapColor().getBlue());
                                 graphics2D.setColor(c);
                                 graphics2D.fillRect(Xb - x, Yb - z, 1, 1);
                             }
