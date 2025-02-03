@@ -3,7 +3,10 @@ package fr.inovancy.main;
 import com.sk89q.worldedit.IncompleteRegionException;
 import com.sk89q.worldedit.regions.Region;
 import com.sk89q.worldedit.world.World;
+
+import org.bukkit.HeightMap;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.command.CommandExecutor;
@@ -46,7 +49,17 @@ public class Command implements CommandExecutor {
                         for (int x = Xa; x < Xb; x++) {
                             for (int z = Ya; z < Yb; z++) {
                                 Location loc = new Location(p.getWorld(), x, (p.getLocation().getBlockY() - 1), z);
-                                Block block = p.getWorld().getHighestBlockAt(loc);
+                                Block block = p.getWorld().getHighestBlockAt(loc, HeightMap.MOTION_BLOCKING_NO_LEAVES);
+
+                                if(block.getType().equals(Material.BARRIER) || block.getType().equals(Material.IRON_BARS) || block.getType().toString().contains("HEAD")){
+                                    for(int y = block.getY()-1; y >= 0; y--){
+                                        block = p.getWorld().getBlockAt(x, y, z);
+                                        if(!block.getType().equals(Material.BARRIER) && !block.getType().equals(Material.IRON_BARS) && !block.getType().toString().contains("HEAD") && !block.isPassable()){
+                                            break;
+                                        }
+                                    }
+                                }
+
                                 BlockData blockData = block.getBlockData();
                                 Color c = new Color(blockData.getMapColor().getRed(), blockData.getMapColor().getGreen(), blockData.getMapColor().getBlue());
                                 graphics2D.setColor(c);
